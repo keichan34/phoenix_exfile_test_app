@@ -52,6 +52,8 @@ defmodule PhoenixExfileTestApp.Web do
       import PhoenixExfileTestApp.Router.Helpers
       import PhoenixExfileTestApp.ErrorHelpers
       import PhoenixExfileTestApp.Gettext
+
+      import Exfile.Phoenix.Helpers
     end
   end
 

@@ -27,3 +27,14 @@ import_config "#{Mix.env}.exs"
 config :phoenix, :generators,
   migration: true,
   binary_id: false
+
+config :exfile, Exfile,
+  secret: "secret string to generate the token used to authenticate requests",
+  backends: %{
+    "store" => {Exfile.Backend.FileSystem,
+      directory: Path.expand("./tmp/store")
+    },
+    "cache" => {Exfile.Backend.FileSystem,
+      directory: Path.expand("./tmp/cache")
+    }
+  }

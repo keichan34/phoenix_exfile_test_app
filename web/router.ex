@@ -1,6 +1,8 @@
 defmodule PhoenixExfileTestApp.Router do
   use PhoenixExfileTestApp.Web, :router
 
+  forward "/attachments", Exfile.Router
+
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -17,10 +19,7 @@ defmodule PhoenixExfileTestApp.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-  end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", PhoenixExfileTestApp do
-  #   pipe_through :api
-  # end
+    resources "/post", PostController
+  end
 end

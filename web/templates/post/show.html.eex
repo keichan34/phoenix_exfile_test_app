@@ -1,0 +1,19 @@
+<h2>Show post</h2>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @post.title %>
+  </li>
+
+  <li>
+    <strong>Photo:</strong>
+    <br>
+    <img src="<%= exfile_url(@conn, @post.photo, format: "jpg", processor: "limit", processor_args: [512, 512]) %>">
+  </li>
+
+</ul>
+
+<%= link "Edit", to: post_path(@conn, :edit, @post) %>
+<%= link "Back", to: post_path(@conn, :index) %>
