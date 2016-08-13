@@ -17,3 +17,5 @@ erl_crash.dump
 
 /tmp/store
 /tmp/cache
+
+/rel/phoenix_exfile_test_app

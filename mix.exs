@@ -40,6 +40,7 @@ defmodule PhoenixExfileTestApp.Mixfile do
       {:cowboy, "~> 1.0"},
       {:exfile, github: "keichan34/exfile", override: true},
       {:exfile_imagemagick, "~> 0.1.2"},
+      {:distillery, ">= 0.0.0"}
    ]
   end
 
