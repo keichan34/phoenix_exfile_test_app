@@ -38,7 +38,7 @@ defmodule PhoenixExfileTestApp.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.9"},
       {:cowboy, "~> 1.0"},
-      {:exfile, "~> 0.3.2"},
+      {:exfile, github: "keichan34/exfile", override: true},
       {:exfile_imagemagick, "~> 0.1.2"},
    ]
   end
